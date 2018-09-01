@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # CONSTANTS / DEFAULT VALUES
-readonly version=0.2
+readonly version=0.3alpha
 readonly K_DEFAULT_DEVICE_NB=0
 readonly K_LED_OFF=0
 readonly K_LED_ON=1
