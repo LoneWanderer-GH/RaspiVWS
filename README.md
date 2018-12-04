@@ -1,11 +1,32 @@
 # RaspiVWS
 Raspberry Pi VLC Webcam Streaming with Logitech C920
 
-This project comes from my answer to this Stack Overflow question
-https://stackoverflow.com/questions/49846400/raspberry-pi-use-vlc-to-stream-webcam-logitech-c920-h264-video-without-tran/49846401#49846401
+##### Table of Contents  
 
-Logo credits to user: https://pixabay.com/en/users/OpenClipart-Vectors-30363/ (https://pixabay.com/en/webcam-cam-camera-digital-online-146301/ licensed under CC0 license and https://pixabay.com/en/service/terms/#usage)
+1. [Why](#Why)
+2. [Prerequisites](#Prerequisites)
+3. [Usage](#Usage)
+4. [Credits](#Credits)
 
+<a name="Why"></a>
+## Why
+This project comes from my answer to [this Stack Overflow question](https://stackoverflow.com/questions/49846400/raspberry-pi-use-vlc-to-stream-webcam-logitech-c920-h264-video-without-tran/49846401#49846401)
+I decided to push it to another level.
+To do:
+- [ ] Go to another higher level with a more evolved concept
+
+<a name="Prerequisites"></a>
+## Prerequisites
+You must have :
+ 1. basic Linux/Unix/Raspbian, Git or Github knowledge to peform the commands below
+ 2. a Raspberry Pi 3B+ (other Raspberries may not be supported). See what it is [on the official website<img src="/assets/Raspi-PGB001[1].png" width='5%' height='5%'/>](https://www.raspberrypi.org/)
+ 3. [VLC ![Get VLC icon](https://images.videolan.org/images/goodies/getvlc.png)](https://www.videolan.org/vlc)
+ ```
+ sudo apt-get install vlc
+ ```
+ 4. and of course, a Logitech C920 webcam connected to your Raspberry Pi (USB). It *could* work with other webcam with additional modifications. Please give credit to my work if you do any improvements.
+
+<a name="Usage"></a>
 ## Usage
 
 Install it, assuming you are in your user profile home directory:
@@ -51,3 +72,20 @@ Usage: ./Raspi_VLC_Webcam_Stream.sh [-h|--help] [-o|--output-videos-directory <a
 	-V,--verbose: Console output verbosity. Controls both this command and underlying VLC verbosity.
 	-v,--version: Prints version
   ```
+
+<a name="Credits"></a>
+## Credits
+### Project logo
+credits to user [OpenClipart-Vectors-30363](https://pixabay.com/en/users/OpenClipart-Vectors-30363/)
+[file](https://pixabay.com/en/webcam-cam-camera-digital-online-146301/) licensed under [Creative Commons (CC0) license](https://creativecommons.org/publicdomain/zero/1.0/deed.en) and may subject to [Pixabay terms of usage](https://pixabay.com/en/service/terms/#usage)
+
+### VLC logo
+credits according [this link](https://www.videolan.org/goodies.html):
+> Copyright (c) 1996-2010 VideoLAN. This logo or a modified version may be used or modified by anyone to refer to the VideoLAN project or any product developed by the VideoLAN team, but does not indicate endorsement by the project.
+
+### Argbash
+Since I'm lazy at writing bash script arguments management, I used the [Argbash](https://argbash.io/) tool.
+Not sure of the credits I should give them ! Quoting generated code:
+
+> Argbash is a bash code generator used to get arguments parsing right.
+> Argbash is FREE SOFTWARE, see https://argbash.io for more info
