@@ -4,6 +4,8 @@ Raspberry Pi VLC Webcam Streaming with Logitech C920
 This project comes from my answer to this Stack Overflow question
 https://stackoverflow.com/questions/49846400/raspberry-pi-use-vlc-to-stream-webcam-logitech-c920-h264-video-without-tran/49846401#49846401
 
+Logo credits to user: https://pixabay.com/en/users/OpenClipart-Vectors-30363/ (https://pixabay.com/en/webcam-cam-camera-digital-online-146301/ licensed under CC0 license and https://pixabay.com/en/service/terms/#usage)
+
 ## Usage
 
 Install it, assuming you are in your user profile home directory:
