@@ -1,5 +1,9 @@
-# RaspiVWS
-Raspberry Pi VLC Webcam Streaming with Logitech C920
+# RaspiVWS: Raspberry Pi VLC Webcam Streaming, with Logitech C920 USB webcam
+
+This project aims at providing a convenient way to perform webcam streaming over HTTP using a Raspberry Pi and Logitech C920.
+It can be used as a babycam, dashcam, surveillance cam, and any other idea you might have.
+There are ideas for major future improvements, it will depend on how much time I can give to it.
+**This is tested and working in conditions indicated below.**
 
 ##### Table of Contents  
 
