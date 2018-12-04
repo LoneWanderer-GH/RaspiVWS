@@ -8,19 +8,27 @@ https://stackoverflow.com/questions/49846400/raspberry-pi-use-vlc-to-stream-webc
 
 Install it, assuming you are in your user profile home directory:
 
-```git clone https://github.com/LoneWanderer-GH/RaspiVWS```
+```
+git clone https://github.com/LoneWanderer-GH/RaspiVWS
+```
 
 Go into the created folder:
 
-```cd RaspiVWS```
+```
+cd RaspiVWS
+```
 
 Ensure you have execution rigths on the script
 
-```chmod +x Raspi_VLC_Webcam_Stream.sh```
+```
+chmod +x Raspi_VLC_Webcam_Stream.sh
+```
 
 Execute command, eg:
 
-```./Raspi_VLC_Webcam_Stream.sh -h```
+```
+./Raspi_VLC_Webcam_Stream.sh -h
+```
 
 It should produce a console output similar to this:
 
