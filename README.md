@@ -117,6 +117,11 @@ This will transform your pi into a wifi access point.
 <a name="PlannedExecution"></a>
 ### 5.2 Planned execution tips
 
+The following assumes your Pi unix user name is `pi` and that you installed RaspiWVS in your home folder, i.e. the script is located here:
+```
+/home/pi/RaspiVWS/Raspi_VLC_Webcam_Stream.sh
+```
+
 #### Method 1: rc.local
 
 You can make the `rc.local` script use your custom script to be executed at startup.
@@ -126,44 +131,44 @@ You can follow [instructions from official RaspberryPi3+ website](https://www.ra
 
 We will create a "webcam-stream" service.
 ```
-    cd /lib/systemd/system/
-    sudo nano webcam-stream.service
+cd /lib/systemd/system/
+sudo nano webcam-stream.service
 ```
 And write in it:
 ```
-    [Unit]
-    Description=Custom Webcam Streaming Service
-    After=multi-user.target
-     
-    [Service]
-    Type=simple
-    ExecStart=/home/pi/Webcam_Record/vlc_webcam_stream_service.sh
-    Restart=on-abort
-     
-    [Install]
-    WantedBy=multi-user.target
+[Unit]
+Description=Custom Webcam Streaming Service
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/RaspiVWS/Raspi_VLC_Webcam_Stream.sh
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 Make the service file and the script executable:
 ```
-    sudo chmod 644 /lib/systemd/system/webcam-stream.service
-    chmod +x /home/pi/Webcam_Record/vlc_webcam_stream.sh
+sudo chmod 644 /lib/systemd/system/webcam-stream.service
+chmod +x /home/pi/RaspiVWS/Raspi_VLC_Webcam_Stream.sh
 ```
 
 Allow VLC to be excuted as root:
 ```
-    sudo sed -i 's/geteuid/getppid/' /usr/bin/vlc
+sudo sed -i 's/geteuid/getppid/' /usr/bin/vlc
 ```
 
 Reload deamons and enable our service:
 ```
-    sudo systemctl daemon-reload
-    sudo systemctl enable webcam-stream.service
+sudo systemctl daemon-reload
+sudo systemctl enable webcam-stream.service
 ```
 Check it is recognized and working:
 ```
-    sudo service webcam-stream status
-    sudo service webcam-stream start
+sudo service webcam-stream status
+sudo service webcam-stream start
 ```
 You can check with another computer that the video is correctly streamed.
 Note that the webcam won't be available while the service is running.
@@ -172,7 +177,7 @@ Note that the webcam won't be available while the service is running.
 
 To launch the execution today at 14:00, you can use the following command:
 ```
-    ./my_vlc_webcam_script.sh | at 1400
+cd ~/RaspiVWS && ./Raspi_VLC_Webcam_Stream.sh | at 1400
 ```
 
 See the `at` command manual for further details.
@@ -182,14 +187,14 @@ See the `at` command manual for further details.
 
 I recently ran into VLC error after a dist-upgrade:
 ```
-    VLC media player 2.2.6 Umbrella (revision 2.2.6-0-g1aae78981c)
-    [00acb230] pulse audio output error: PulseAudio server connection failure: Connection refused
+VLC media player 2.2.6 Umbrella (revision 2.2.6-0-g1aae78981c)
+[00acb230] pulse audio output error: PulseAudio server connection failure: Connection refused
 ```
 The solution I found is to launch VLC in GUI mode and change the default audio device to ALSA (instead of Automatic). I can also be done in command line.
 See the solution found here [VLC issues with PulseAudio](https://www.raspberrypi.org/forums/viewtopic.php?t=29403)
 
 ```
-    cvlc -A alsa,none --alsa-audio-device default
+cvlc -A alsa,none --alsa-audio-device default
 ```
 
 <a name="Credits"></a>
