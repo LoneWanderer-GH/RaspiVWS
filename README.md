@@ -11,7 +11,8 @@ There are ideas for major future improvements, it will depend on how much time I
 * It requires little to no additional installation over an existing Raspbian image. It relies on preinstalled software. If it is not installed, it will show an error explaining what is missing.
 * Low CPU footprint: there is little to no transcoding performed by the pi, due to usage of the webcam capabilities (native H264 video stream)
 * Script is straightforward: launch it, and voilà.
-* Can be easily integrated to jobs, cron, <you name it> and automation. Everything is documented [in this Stack Overflow question](https://stackoverflow.com/questions/49846400/raspberry-pi-use-vlc-to-stream-webcam-logitech-c920-h264-video-without-tran/49846401#49846401)
+* Can be easily integrated to jobs, cron, <you name it> and automation.
+Everything is documented [in this Stack Overflow question](https://stackoverflow.com/questions/49846400/raspberry-pi-use-vlc-to-stream-webcam-logitech-c920-h264-video-without-tran/)
 
 ##### Table of Contents  
 
@@ -27,7 +28,7 @@ There are ideas for major future improvements, it will depend on how much time I
 
 <a name="Why"></a>
 ## 1. Why
-This project comes from my answer to [this Stack Overflow question](https://stackoverflow.com/questions/49846400/raspberry-pi-use-vlc-to-stream-webcam-logitech-c920-h264-video-without-tran/49846401#49846401)
+This project comes from my answer to [this Stack Overflow question](https://stackoverflow.com/questions/49846400/raspberry-pi-use-vlc-to-stream-webcam-logitech-c920-h264-video-without-tran/)
 I decided to push it to another level.
 To do:
 - [ ] Go to another higher level with a more evolved concept
