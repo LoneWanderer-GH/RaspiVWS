@@ -1,18 +1,21 @@
 # RaspiVWS: Raspberry Pi VLC Webcam Streaming, with Logitech C920 USB webcam
+## LICENSE
+I mostly require that this project and my stack overflow and github profile to be credited and linked if you reuse, derive, or are inspired by any part of this project.
 
 ## Goal
 This project aims at providing a simple and convenient way to perform webcam streaming over HTTP using a Raspberry Pi and Logitech C920.
 It can be used as a babycam, dashcam, surveillance cam, and any other idea you might have.
 There are ideas for major future improvements, it will depend on how much time I can give to it.
-**This is tested and working in conditions indicated below.**
+**This is tested and working in conditions indicated below and in [my original Stack Overflow question](https://stackoverflow.com/questions/49846400/raspberry-pi-use-vlc-to-stream-webcam-logitech-c920-h264-video-without-tran/)**
 
 ## How is it different from other projects ?
 
 * It requires little to no additional installation over an existing Raspbian image. It relies on preinstalled software. If it is not installed, it will show an error explaining what is missing.
-* Low CPU footprint: there is little to no transcoding performed by the pi, due to usage of the webcam capabilities (native H264 video stream)
+* Low CPU footprint: there is little to no transcoding performed by the pi, due to usage of the C920 webcam capabilities (native H264 video stream). (Same result may be achieved with any webcam that provides similar features, such as native encoding such as H264 or any other encoding that won't require Raspberry Pi's CPU power.)
 * Script is straightforward: launch it, and voilà.
 * Can be easily integrated to jobs, cron, <you name it> and automation.
-Everything is documented [in this Stack Overflow question](https://stackoverflow.com/questions/49846400/raspberry-pi-use-vlc-to-stream-webcam-logitech-c920-h264-video-without-tran/)
+Everything is documented [in my Stack Overflow question](https://stackoverflow.com/questions/49846400/raspberry-pi-use-vlc-to-stream-webcam-logitech-c920-h264-video-without-tran/)
+* The system could be also used with on-the-fly transcoding (again [see my Stack Overflow question](https://stackoverflow.com/questions/49846400/raspberry-pi-use-vlc-to-stream-webcam-logitech-c920-h264-video-without-tran/) for some hints on how to use VLC commands and adapt this script.
 
 ##### Table of Contents  
 
@@ -28,7 +31,7 @@ Everything is documented [in this Stack Overflow question](https://stackoverflow
 
 <a name="Why"></a>
 ## 1. Why
-This project comes from my answer to [this Stack Overflow question](https://stackoverflow.com/questions/49846400/raspberry-pi-use-vlc-to-stream-webcam-logitech-c920-h264-video-without-tran/)
+This project comes from my answer to [my Stack Overflow question](https://stackoverflow.com/questions/49846400/raspberry-pi-use-vlc-to-stream-webcam-logitech-c920-h264-video-without-tran/)
 I decided to push it to another level.
 To do:
 - [ ] Go to another higher level with a more evolved concept
