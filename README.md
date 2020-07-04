@@ -1,4 +1,6 @@
 # RaspiVWS: Raspberry Pi VLC Webcam Streaming, with Logitech C920 USB webcam
+[![Donate to this project using Patreon](https://img.shields.io/badge/patreon-donate-yellow.svg)](https://www.patreon.com/bePatron?u=38268348)
+
 ## LICENSE
 I mostly require that this project and my stack overflow and github profile to be credited and linked if you reuse, derive, or are inspired by any part of this project.
 
